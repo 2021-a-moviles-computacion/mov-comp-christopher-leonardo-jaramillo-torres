@@ -1,1 +1,1 @@
-# mov-comp-christopher-leonardo-jaramillo-torres
+# mov-comp-jaramillo-torres-christopher-leonardo
