@@ -1,0 +1,20 @@
+Nombre del equipo: Aguilas
+Colores del equipo: cafe y blanco
+Año de fundación: 2009
+Dirigente del equipo: Wlady
+Técnico del equipo: Alejandro
+Fecha de inscripción: Mon Jul 05 20:43:52 COT 2021
+	Nombre del jugador 	 Apodo del jugador 	 Estatura del jugador 	 Edad del jugador 	 Penalización
+	Christopher	Meñique	1.68	23	true
+	Bryan	Tanque	1.73	26	true
+	Lenin	Burrita	1.72	23	true
+Nombre del equipo: Tiurones
+Colores del equipo: azul y negro
+Año de fundación: 2010
+Dirigente del equipo: Carlos
+Técnico del equipo: Guillermo
+Fecha de inscripción: Mon Jul 05 20:43:52 COT 2021
+	Nombre del jugador 	 Apodo del jugador 	 Estatura del jugador 	 Edad del jugador 	 Penalización
+	Jose	Gato	1.55	29	false
+	Alex	Sapo	1.92	27	false
+	Diego	Klin	1.73	27	false
