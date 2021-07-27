@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Examen01</string>
+    <string name="servidor">Servidores</string>
+    <string name="crearServidor">Crear nuevo servidor</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+    <string name="verPaginas">Ver páginas</string>
+    <string name="anadirServidor">Añadir servidor</string>
+</resources>
