@@ -90,12 +90,12 @@ class BaseDatosServidor(
         conexionEscritura.close()
     }
 
-    fun recuperarPaginas(){
+    fun recuperarPaginas(){/*
         //val consultarPaginas = "delete from PAGINA"
         val consultarPaginas = "select * from PAGINA where id_servidor = ${ServidorMemoria.idServidorArraySelecionado}"
         val lectura = readableDatabase
         val resultados = lectura.rawQuery(consultarPaginas, null)
-        val paginasEncontradas = PaginaWeb(0,0,"","","","","")
+        //val paginasEncontradas = PaginaWeb(0,0,"","","","","")
         val paginaExiste = resultados.moveToFirst()
 
         if(paginaExiste){
@@ -127,7 +127,7 @@ class BaseDatosServidor(
         }
 
         resultados.close()
-        lectura.close()
+        lectura.close()*/
 
     }
     
@@ -143,7 +143,7 @@ class BaseDatosServidor(
     ){
         //ServidorMemoria.arregloServidores.add(Servidor(ubicacion,direccionIP,marca,empresa,tipoServidor,protocolos))
         //Log.i("crear", "insertar - tamaño del array ${ServidorMemoria.arregloServidores.size}")
-        val conexionEscritura = writableDatabase
+       /* val conexionEscritura = writableDatabase
         val valoresServidor = ContentValues()
         valoresServidor.put("id_servidor", id_servidor)
         valoresServidor.put("ubicacion", ubicacion)
@@ -161,11 +161,11 @@ class BaseDatosServidor(
         //ServidorMemoria.arregloServidores.add(nuevoServidor)
         //Log.i("crear", "insertar - tamaño del array ${ServidorMemoria.arregloServidores.size}")
         conexionEscritura.close()
-        //return nuevoServidor
+        //return nuevoServidor*/
     }
     
     fun recuperarServidores(){
-        val consultarServidores = "select * from SERVIDOR"
+        /*val consultarServidores = "select * from SERVIDOR"
         val lectura = readableDatabase
         val resultados = lectura.rawQuery(consultarServidores, null)
         val servidoresEncontrados = Servidor(0,"","","","","","")
@@ -202,7 +202,7 @@ class BaseDatosServidor(
         }
 
         resultados.close()
-        lectura.close()
+        lectura.close()*/
 
     }
 

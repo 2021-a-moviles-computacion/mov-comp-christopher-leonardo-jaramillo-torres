@@ -8,24 +8,23 @@ import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.gracegbe.examen.BaseDatosServidor
+import com.gracegbe.examen.PaginaWeb
+import com.gracegbe.examen.Servidor
 
 class VerPaginas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_paginas)
-        
-        ServidorMemoria.baseDatos = BaseDatosServidor(this)
-        ServidorMemoria.baseDatos?.recuperarPaginas()
-       
+
        
         val adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas)
         adaptador.notifyDataSetChanged()
 
         val listViewPaginas = findViewById<ListView>(R.id.ltv_paginas)
-
-        listViewPaginas.adapter = adaptador
-
+        recuperarPaginas(listViewPaginas)
         registerForContextMenu(listViewPaginas)
 
         val nombreServidor = findViewById<TextView>(R.id.txt_ubicacion_servidor)
@@ -41,7 +40,6 @@ class VerPaginas : AppCompatActivity() {
         botonIrNuevaPagina.setOnClickListener {
             abrirActividad(InsertarPagina::class.java)
         }
-       
 
     }
 
@@ -61,15 +59,9 @@ class VerPaginas : AppCompatActivity() {
         val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
         return when (item.itemId) {
             R.id.op_editar_pagina -> {
-                
-                val aux = ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas[info.position]
-                ServidorMemoria.paginaActualizar = aux
-                ServidorMemoria.actualizarPagina = true
 
-                if (aux != null) {
-                    //ServidorMemoria.servidorSelecionado = aux.ubicacion.toString()
-                    ServidorMemoria.idPaginaArraySeleccionado = info.position
-                }
+                ServidorMemoria.actualizarPagina = true
+                ServidorMemoria.idPaginaArraySeleccionado = info.position
 
                 abrirActividad(InsertarPagina::class.java)
 
@@ -77,15 +69,27 @@ class VerPaginas : AppCompatActivity() {
             }
             R.id.op_eliminar_pagina -> {
 
-                ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas.removeAt(info.position)
-                //ServidorMemoria.arregloServidores[info.position].paginas.clear()
+                val db = Firebase.firestore
 
-                ServidorMemoria.baseDatos?.eliminarPagina(info.position, ServidorMemoria.idServidorArraySelecionado)
+                db.collection("servidor")
+                    .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].empresa.toString())
+                    .collection("pagina")
+                    .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas[info.position].nombre.toString())
+                    .delete()
 
-                abrirActividad(VerPaginas::class.java)
+                val listViewPagina = findViewById<ListView>(R.id.ltv_paginas)
+                recuperarPaginas(listViewPagina)
+                return true
+            }
+
+            R.id.op_ir_mapa -> {
+
+                ServidorMemoria.idPaginaArraySeleccionado = info.position
+
+                abrirActividad(UbicacionPagina::class.java)
 
                 return true
-            }         
+            }
 
             else -> super.onOptionsItemSelected(item)
         }
@@ -100,4 +104,34 @@ class VerPaginas : AppCompatActivity() {
         )
         this.startActivity(intentImplicito)
     }
+
+    fun recuperarPaginas(listViewPaginas: ListView){
+        Log.i("store","entro a la recuperacion")
+        val db = Firebase.firestore
+
+        ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas.clear()
+
+        db.collection("servidor")
+            .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].empresa.toString())
+            .collection("pagina")
+            .get()
+            .addOnSuccessListener {
+                for (p in it) {
+                    val pagina =
+                        PaginaWeb(
+                            p.id.toString(),
+                            p.getString("autor").toString(),
+                            p.getString("framework").toString(),
+                            p.getString("lenguajes").toString(),
+                            p.getString("nombreIndex").toString(),
+                            p.getString("latitud").toString(),
+                            p.getString("longitud").toString())
+                    ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas.add(pagina)
+                }
+                val adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas)
+                adaptador.notifyDataSetChanged()
+                listViewPaginas.adapter = adaptador
+            }
+    }
+
 }
