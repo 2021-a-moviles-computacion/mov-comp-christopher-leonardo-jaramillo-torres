@@ -8,15 +8,4 @@
     <item
         android:id="@+id/op_eliminar_pagina"
         android:title="@string/eliminar" />
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/op_editar_pagina"
-        android:title="@string/editar" />
-    <item
-        android:id="@+id/op_eliminar_pagina"
-        android:title="@string/eliminar" />
->>>>>>> Stashed changes
 </menu>
