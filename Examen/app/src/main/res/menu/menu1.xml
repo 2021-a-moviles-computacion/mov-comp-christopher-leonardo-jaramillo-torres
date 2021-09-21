@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -12,19 +11,4 @@
     <item
         android:id="@+id/op_ver_paginas"
         android:title="@string/verPaginas" />
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/op_editar_servidor"
-        android:title="@string/editar" />
-    <item
-        android:id="@+id/op_elliminar_servidor"
-        android:title="@string/eliminar" />
-    <item
-        android:id="@+id/op_ver_paginas"
-        android:title="@string/verPaginas" />
->>>>>>> Stashed changes
 </menu>
