@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34343c "
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_salas_discord"
+        android:layout_width="377dp"
+        android:layout_height="557dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btn_crear_sala"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/a_esquina_redonda_crear_sala"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="#3ca25b"
+        android:textSize="50sp"
+        app:iconGravity="textEnd|textTop|textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcv_salas_discord" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

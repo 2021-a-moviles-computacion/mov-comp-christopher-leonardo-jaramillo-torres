@@ -39,14 +39,23 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="kotlin01-08062021.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,6 +69,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.PrincipalKt" />
       </list>
     </recent_temporary>
@@ -73,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623196584612</updated>
       <workItem from="1623196609773" duration="4559000" />
+      <workItem from="1623256242619" duration="21420000" />
     </task>
     <servers />
   </component>

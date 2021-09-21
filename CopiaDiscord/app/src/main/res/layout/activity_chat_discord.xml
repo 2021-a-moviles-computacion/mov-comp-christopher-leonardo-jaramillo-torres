@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343C44"
+    tools:context=".ChatTextoVoz">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_chats_voz"
+        android:layout_width="411dp"
+        android:layout_height="341dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_chats_texto"
+        android:layout_width="408dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_crear_chat_texto"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:background="#343C44"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#343C44"
+        android:textColorHint="#343C44"
+        android:textColorLink="#343C44"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/rcv_chats_texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:stateListAnimator="@null" />
+
+    <Button
+        android:id="@+id/btn_ccrear_chat_voz"
+        android:layout_width="64dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="1dp"
+        android:background="#343C44"
+        android:stateListAnimator="@null"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#343C44"
+        android:textColorHint="#343C44"
+        android:textColorLink="#343C44"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/rcv_chats_voz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcv_chats_texto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="116dp"
+        android:text="CANALES DE TEXTO"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_crear_chat_texto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="140dp"
+        android:text="CANALES DE VOZ"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#343C44"
+        android:textColorLink="#343C44"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ccrear_chat_voz"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_cabecera_salas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Nombre"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

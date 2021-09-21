@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:background="#34343c ">
+
+    <RelativeLayout
+        android:layout_width="410dp"
+        android:layout_height="298dp"
+        android:background="#34343c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#343C44">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="#343C44"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/parlante_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="200dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/audifonos_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="140dp"
+                android:background="#343C44"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.529"
+                app:srcCompat="@drawable/llamar_persona_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="80dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sonido_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="24dp"
+                android:background="#343C44"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.529"
+                app:srcCompat="@drawable/configuracion_foreground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="#343C44">
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="344dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/camara_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="264dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/compartir_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="188dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/mirofono_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="44dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton14"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/parlante_foreground" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="#343C44"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/colgar_foreground" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

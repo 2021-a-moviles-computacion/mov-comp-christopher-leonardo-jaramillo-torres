@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "866920184801",
+    "project_id": "examen-moviles-2b",
+    "storage_bucket": "examen-moviles-2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866920184801:android:86ae71abd1690c603d70a0",
+        "android_client_info": {
+          "package_name": "com.gracegbe.examen01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866920184801-j0nnb23c8gg3qle67ns6rub784u8ao56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCLie89ogm_DMBpY9kukbWJJRNN0kSZj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866920184801-j0nnb23c8gg3qle67ns6rub784u8ao56.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
