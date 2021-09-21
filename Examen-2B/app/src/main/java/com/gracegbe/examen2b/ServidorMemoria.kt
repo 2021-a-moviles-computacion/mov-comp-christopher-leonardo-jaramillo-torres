@@ -1,0 +1,23 @@
+package com.gracegbe.examen2b
+
+import PaginaWeb
+import com.gracegbe.examen.Servidor
+
+class ServidorMemoria {
+
+    companion object {
+        var arregloServidores = ArrayList<Servidor>()
+        var arregloPaginas = ArrayList<PaginaWeb>()
+        var actualizacionServidor = false
+        var actualizarPagina = false
+        var servidorActualizar: Servidor? = null
+        var paginaActualizar: PaginaWeb? = null
+        //var baseDatos: BaseDatosServidor? = null
+        var servidorSelecionado = ""
+        var idServidorArraySelecionado = 0
+        var idPaginaArraySeleccionado = 0
+        var indexBase = 0
+        var indexPaginaUltimo = 0
+    }
+
+}
