@@ -1,6 +1,7 @@
 package com.gracegbe.examen2b
 
 import PaginaWeb
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -67,31 +68,47 @@ class InsertarPagina : AppCompatActivity() {
                 "longitud" to longitud.text.toString()
             )
 
-            if (ServidorMemoria.actualizarPagina == false) {
+            if (nombrePagina.text.isNotEmpty() &&
+                    nombreIndex.text.isNotEmpty() &&
+                    autor.text.isNotEmpty() &&
+                    framework.text.isNotEmpty() &&
+                    lenguajes.text.isNotEmpty() &&
+                    latitud.text.isNotEmpty()){
 
-                val db = Firebase.firestore
+                if (ServidorMemoria.actualizarPagina == false) {
 
-                val pagina = db.collection("servidor")
-                    .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].empresa.toString())
-                    .collection("pagina")
+                    val db = Firebase.firestore
 
-                pagina.document(nombrePagina.text.toString()).set(datosPagina)
-                abrirActividad(VerPaginas::class.java)
-            }
+                    val pagina = db.collection("servidor")
+                            .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].empresa.toString())
+                            .collection("pagina")
 
-            if (ServidorMemoria.actualizarPagina == true) {
+                    pagina.document(nombrePagina.text.toString()).set(datosPagina)
+                    abrirActividad(VerPaginas::class.java)
+                }
 
-                val db = Firebase.firestore
+                if (ServidorMemoria.actualizarPagina == true) {
 
-                val paginaAct = db.collection("servidor")
-                    .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].empresa.toString())
-                    .collection("pagina")
-                    .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas[ServidorMemoria.idPaginaArraySeleccionado].nombre.toString())
+                    val db = Firebase.firestore
 
-                paginaAct.update(datosPagina)
-                ServidorMemoria.actualizarPagina = false
-                abrirActividad(VerPaginas::class.java)
+                    val paginaAct = db.collection("servidor")
+                            .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].empresa.toString())
+                            .collection("pagina")
+                            .document(ServidorMemoria.arregloServidores[ServidorMemoria.idServidorArraySelecionado].paginas[ServidorMemoria.idPaginaArraySeleccionado].nombre.toString())
 
+                    paginaAct.update(datosPagina)
+                    ServidorMemoria.actualizarPagina = false
+                    abrirActividad(VerPaginas::class.java)
+
+                }
+
+            } else {
+                val alerta = AlertDialog.Builder(this)
+                alerta.setTitle("Error")
+                alerta.setMessage("LLene todos los campos")
+                alerta.setPositiveButton("Aceptar", null)
+                val dialog: AlertDialog = alerta.create()
+                dialog.show()
             }
         }
 

@@ -1,5 +1,6 @@
 package com.gracegbe.examen2b
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -61,28 +62,41 @@ class InsertarServidor : AppCompatActivity() {
                 "tipoServidor" to tipoServidor.text.toString(),
                 "ubicacion" to ubicacion.text.toString()
             )
+            
+            if (ubicacion.text.isNotEmpty() &&
+                    direccionIP.text.isNotEmpty() &&
+                    marca.text.isNotEmpty() &&
+                    empresa.text.isNotEmpty() &&
+                    tipoServidor.text.isNotEmpty() &&
+                    protocolos.text.isNotEmpty()){
 
-            if (ServidorMemoria.actualizacionServidor == false) {
+                if (ServidorMemoria.actualizacionServidor == false) {
 
-                val db = Firebase.firestore
-                val servidor = db.collection("servidor")
+                    val db = Firebase.firestore
+                    val servidor = db.collection("servidor")
 
-                servidor.document(empresa.text.toString()).set(datosServidor)
-                abrirActividad(MainActivity::class.java)
+                    servidor.document(empresa.text.toString()).set(datosServidor)
+                    abrirActividad(MainActivity::class.java)
+                }
+
+                if (ServidorMemoria.actualizacionServidor == true) { // en caso de que toque actualizar
+
+                    val db = Firebase.firestore
+                    val servidorAct = db.collection("servidor").document(empresa.text.toString())
+                    servidorAct.update(datosServidor)
+                    ServidorMemoria.actualizacionServidor == false
+                    abrirActividad(MainActivity::class.java)
+                }
+                
+            } else {
+                val alerta = AlertDialog.Builder(this)
+                alerta.setTitle("Error")
+                alerta.setMessage("LLene todos los campos")
+                alerta.setPositiveButton("Aceptar", null)
+                val dialog: AlertDialog = alerta.create()
+                dialog.show()
             }
-
-            if (ServidorMemoria.actualizacionServidor == true) { // en caso de que toque actualizar
-
-                val db = Firebase.firestore
-                val servidorAct = db.collection("servidor").document(empresa.text.toString())
-                servidorAct.update(datosServidor)
-                ServidorMemoria.actualizacionServidor == false
-                abrirActividad(MainActivity::class.java)
-            }
-
         }
-
-
     }
 
     fun abrirActividad(clase: Class<*>) {
