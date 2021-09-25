@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "479266147533",
+    "project_id": "proyecto-reservaciones-bc72c",
+    "storage_bucket": "proyecto-reservaciones-bc72c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479266147533:android:ec046035f922b43ed96d84",
+        "android_client_info": {
+          "package_name": "com.gracegbe.proyecto_2b"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479266147533-062ilgkbslo51rbvt5vvt8q2fj0u8l0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYHJ-dXra8uiY_mqXi2yIS5IO8kDCRUPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479266147533-062ilgkbslo51rbvt5vvt8q2fj0u8l0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

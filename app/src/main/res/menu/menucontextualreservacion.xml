@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/opaceptar_reservacion"
+        android:title="Aceptar" />
+    <item
+        android:id="@+id/op_cancelar_reservacion"
+        android:title="Cancelar" />
+
+</menu>

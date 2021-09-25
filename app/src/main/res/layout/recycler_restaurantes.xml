@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="402dp"
+        android:layout_height="174dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="18dp"
+            android:text="Nombre:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtv_rec_nombre_restaurante"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="268dp"
+            android:layout_marginTop="19dp"
+            android:text="Nombre"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtv_rec_horario_restaurante"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginTop="56dp"
+            android:text="horario"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtv_rec_celular_restaurante"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginTop="95dp"
+            android:text="celular"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtv_rec_descripcion_restaurante"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="268dp"
+            android:layout_marginTop="134dp"
+            android:text="descripcion"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="56dp"
+            android:text="Horario:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="95dp"
+            android:text="Teléfono:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="133dp"
+            android:text="Descripción:"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btn_img_ir_restaurante"
+            android:layout_width="131dp"
+            android:layout_height="141dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            app:srcCompat="@mipmap/imagen" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
