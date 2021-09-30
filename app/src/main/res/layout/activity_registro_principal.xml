@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AAF3F0"
     tools:context=".RegistroPrincipal">
 
     <EditText
         android:id="@+id/txt_registro_correo_electronico"
         android:layout_width="319dp"
         android:layout_height="45dp"
+        android:background="@drawable/bordes"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,6 +95,7 @@
         android:layout_width="324dp"
         android:layout_height="47dp"
         android:layout_marginTop="28dp"
+        android:background="@drawable/bordes"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,6 +108,7 @@
         android:layout_width="306dp"
         android:layout_height="49dp"
         android:layout_marginTop="22dp"
+        android:background="@drawable/bordes"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"

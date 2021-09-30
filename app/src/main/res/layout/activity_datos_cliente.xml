@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AAF3F0"
     tools:context=".DatosCliente">
 
     <TextView
@@ -18,32 +19,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="221dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="29dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@mipmap/imagen" />
-
-    <Button
-        android:id="@+id/btn_datos_cliente_imagen"
-        android:layout_width="229dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="18dp"
-        android:text="Seleccionar imagen de perfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
     <EditText
         android:id="@+id/txt_datos_cliente_nombre"
         android:layout_width="302dp"
         android:layout_height="43dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/bordes"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,33 +36,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="21dp"
         android:text="Fecha de nacimiento:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_datos_cliente_imagen" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_datos_cliente_nombre" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="24dp"
         android:text="Descripción:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_datos_cliente_imagen" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_datos_cliente_fecha_nacimiento" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="172dp"
         android:text="Nombre:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_datos_cliente_imagen" />
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        android:text="Seleccione una imagen"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/txt_datos_cliente_fecha_nacimiento"
@@ -88,6 +81,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/bordes"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +93,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="53dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/bordes"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,4 +108,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_datos_cliente_descripcion" />
+
+    <ImageView
+        android:id="@+id/imgv_imagen_cliente"
+        android:layout_width="187dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:srcCompat="@mipmap/imagen" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,7 +43,6 @@ class RegistroPrincipal : AppCompatActivity() {
                 } else if (registroRestaurante.isChecked) {
 
                     Restaurante.nombreRestauranteSeteado = nombreUsuario.text.toString()
-
                     Restaurante.nombreUsuarioRestauranteAux = nombreUsuario.text.toString()
                     Restaurante.correoElectronicoRestauranteAux = correoElectronico.text.toString()
 

@@ -8,8 +8,8 @@
     android:background="#34343c">
 
     <RelativeLayout
-        android:layout_width="412dp"
-        android:layout_height="90dp"
+        android:layout_width="405dp"
+        android:layout_height="89dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

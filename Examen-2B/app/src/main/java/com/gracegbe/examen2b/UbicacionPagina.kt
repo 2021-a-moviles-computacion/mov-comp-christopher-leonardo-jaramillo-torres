@@ -33,7 +33,7 @@ class UbicacionPagina : AppCompatActivity() {
 
                 val ubicacion = com.google.android.gms.maps.model.LatLng(latitud, longitud)
                 val titulo = nombre
-                val zoom = 17f
+                val zoom = 8f
 
                 anadirMarcador(ubicacion, titulo)
                 moverCamaraConZoom(ubicacion, zoom)
